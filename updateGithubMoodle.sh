@@ -1,5 +1,5 @@
 #!/bin/bash
-versionTypes=(int pro)
+versionTypes=(pro)
 versions=(m 22 21 20 19)
 remote=$1
 for versionType in "${versionTypes[@]}"; do
@@ -13,7 +13,7 @@ for versionType in "${versionTypes[@]}"; do
 		fi
 
 		echo "git push -f $remote r_$versionType/$fullVersionName:$fullVersionName"
-		#git push -f $remote r_$versionType/$fullVersionName:$fullVersionName
+		git push -f $remote r_$versionType/$fullVersionName:$fullVersionName
 	done
 done
 
