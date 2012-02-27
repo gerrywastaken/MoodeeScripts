@@ -17,6 +17,6 @@ for versionType in "${versionTypes[@]}"; do
 		fi
 
 		cd ~/src/moodle/
-		git-new-workdir .seed $versionType/$version $fullTypeName/$fullVersionName
+		sh ~/src/git-new-workdir/git-new-workdir .seed $versionType/$version $fullTypeName/$fullVersionName
 	done
 done
